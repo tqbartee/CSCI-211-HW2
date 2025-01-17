@@ -2,15 +2,22 @@ package songboard;
 
 // Class for a single song entry (integer rank, string artist, string songname)
 public class SongEntry {
-	private int rank;
-    private String artist;           // name of the person earning this score
-    private String songname;         // the score value
+	public int rank;
+    public String artist;           // name of the person earning this score
+    public String songname;         // the score value
 
     /** Constructs a song entry with given parameters. */
     public SongEntry(int r, String a, String s) {
 		rank = r;
         artist = a;
         songname = s;
+    }
+
+    // Copy constructor
+    public SongEntry (SongEntry songEntryToCopy) {
+        this.rank = songEntryToCopy.rank;
+        this.artist = songEntryToCopy.artist;
+        this.songname = songEntryToCopy.songname;
     }
 
 	// Functions to get private components below
