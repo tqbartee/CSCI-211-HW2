@@ -1,25 +1,21 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.import songboard.*;
-import java.util.Arrays;
+//import songboard.*;
 import songboard.*;
 
 // Test SongBoard Implementation
 public class Main {
     public static void main(String[] args) {
-        SongBoard mySongBoard;
-        mySongBoard = new SongBoard();
+        //SongBoard mySongBoard;
+        SongBoard mySongBoard = new SongBoard();
         mySongBoard.printTopTen();
         mySongBoard.scrambleBoard();
-        int[] returnArray = new int[mySongBoard.numEntries];
         // See if the scramble board worked
         System.out.println("\n\nThe new scrambled board is:");
         mySongBoard.printTopTen();
         // Now make call to insertionSortBoard here
-        returnArray = mySongBoard.insertionSortBoard();
-        System.out.println("\n\nThe now sorted board is:");
+        mySongBoard.insertionSortBoard();
+        System.out.println("\n\nThe board is now:");
         mySongBoard.printTopTen();
-        // For testing later: print returnArray, compare with expected
-        //String sortedString = Arrays.toString(returnArray);
-        //System.out.println(sortedString);
     }
 }

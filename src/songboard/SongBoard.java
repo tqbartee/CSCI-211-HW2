@@ -3,7 +3,7 @@ package songboard;
 import java.io.*;
 import java.util.Random;
 
-/** Class for storing song rankings, initially read from CSV */
+/* Class for storing song rankings, initially read from CSV */
 public class SongBoard implements SongBoardInterface {
 
 	public int numEntries;            // number of actual entries
@@ -44,7 +44,7 @@ public class SongBoard implements SongBoardInterface {
 		String songname;
 		// Print header
 		System.out.println(songBoardTitle);
-		System.out.println("The Top Ten Are:");
+		System.out.println("The Top Ten in the Array Are:");
 		for (int i = 0; i < 10; i++) {
 			rank = songArray[i].GetRank();
 			artist = songArray[i].GetArtist();
@@ -53,7 +53,7 @@ public class SongBoard implements SongBoardInterface {
 		}
 	}
 
-	// Alternate implementation: try shuffle build-in method
+	// Alternate implementation: try shuffle built-in method
 	public void scrambleBoard() {
 		// a pseudorandom number generator
 		Random rand = new Random();
@@ -61,9 +61,8 @@ public class SongBoard implements SongBoardInterface {
 		double rand0to1;
 		int lowerrandom, upperrandom, randomrange, randlowertoupper;
 		int j;  //Higher entry to swap
-		//rand.setSeed(System.currentTimeMillis());
 		long mylong = System.currentTimeMillis();
-		System.out.println("\n\nCurrent time in milliseconds since 1970 is: " + Long.toString(mylong));
+		//System.out.println("\n\nCurrent time in milliseconds since 1970 is: " + Long.toString(mylong));
 		rand.setSeed(mylong);
 		SongEntry temp;
 		for (int i = 0; i < numEntries; i++) {
@@ -80,28 +79,15 @@ public class SongBoard implements SongBoardInterface {
 		}
 	}
 
-	//public void insertionSortBoard() {
-	public int[] insertionSortBoard() {
+	public void insertionSortBoard() {
+		System.out.println ("\nThe new sort will happen here...\n");
 
-		// This code for test only
-		int[] returnArray = new int[numEntries];
-		for (int count = 0; count < numEntries; count++) {
-			returnArray[count] = 0;
-		}
+		// Student assignment: insert code from book
+		// Paste just the code from lines 3 to 12 in the book
+		// (Not lines 1 and 2 and 13)
+		// Then edit the code to work with the songboard instead
+		// of array of chars
 
-		// For CSCI 211:
-		// Insert sorting code here, adjust book template
-		// >>>>>>>>>
-
-
-
-
-
-
-		// Generate return array (for unit test only - future)
-		for (int count = 0; count < numEntries; count++) {
-			returnArray[count] = songArray[count].rank;
-		}
-		return returnArray;
+		// >>> Insert code here then edit
 	}
 }
